@@ -1,0 +1,860 @@
+/* Polymarket chrome — vanilla so the Vercel pack always includes it. */
+[data-brand="bullpen"] {
+  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --color-bg: #ffffff;
+  --color-fg: #1a1a1a;
+  --color-muted: #616161;
+  --color-faint: #8a8a8a;
+  --color-surface: #ffffff;
+  --color-surface-2: #f2f2f2;
+  --color-accent: #0078d4;
+  --color-line: #e6e6e6;
+  --color-live: #e23d32;
+  --color-media: #ffffff;
+  --color-on-media: #1a1a1a;
+  --color-on-media-muted: #616161;
+  background: #ffffff;
+  color: #1a1a1a;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+[data-brand="bullpen"] .bullpen-bar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: #ffffff;
+  color: #000000;
+  border-bottom: 1px solid #ececec;
+}
+[data-brand="bullpen"] .bc-ads {
+  background: #0b0f14;
+  color: #ffffff;
+}
+[data-brand="bullpen"] .bc-ads-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 2.75rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+[data-brand="bullpen"] .bc-ads-inner::-webkit-scrollbar {
+  display: none;
+}
+[data-brand="bullpen"] .bc-ad {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  height: 1.85rem;
+  padding: 0 0.7rem;
+  border-radius: 4px;
+  background: #161d27;
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+[data-brand="bullpen"] .bc-ad b {
+  color: #c8f542;
+  font-weight: 650;
+  font-size: 0.72rem;
+}
+[data-brand="bullpen"] .bc-ads-note {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 10px;
+  color: #8b93a0;
+  white-space: nowrap;
+}
+[data-brand="bullpen"] .bullpen-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  height: 3.4rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+[data-brand="bullpen"] .bullpen-brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+[data-brand="bullpen"] .bullpen-brand img {
+  display: block;
+  height: 1.35rem;
+  width: auto;
+}
+[data-brand="bullpen"] .bullpen-bar-links {
+  display: none;
+  align-items: center;
+  gap: 1.35rem;
+}
+@media (min-width: 800px) {
+  [data-brand="bullpen"] .bullpen-bar-links {
+    display: flex;
+  }
+}
+[data-brand="bullpen"] .bullpen-bar-links a {
+  font-size: 0.8125rem;
+  color: #262626;
+  text-decoration: none;
+}
+[data-brand="bullpen"] .bullpen-bar-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+[data-brand="bullpen"] .bullpen-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #000000;
+  text-decoration: none;
+}
+[data-brand="bullpen"] .bullpen-bar nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+[data-brand="bullpen"] .bullpen-bar nav a {
+  display: inline-flex;
+  height: 2.25rem;
+  align-items: center;
+  padding: 0 0.65rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b6b6b;
+  text-decoration: none;
+}
+[data-brand="bullpen"] .bullpen-bar nav a.bc-mag {
+  width: 2.25rem;
+  padding: 0;
+  justify-content: center;
+  color: #0078d4;
+}
+[data-brand="bullpen"] .bullpen-bar nav a.ms-bar-cta {
+  height: 2rem;
+  margin-left: 0.35rem;
+  padding: 0 0.85rem;
+  background: #0078d4;
+  color: #ffffff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+[data-brand="bullpen"] .bullpen-bar nav a.ms-bar-cta:hover {
+  background: #006cbe;
+  color: #ffffff;
+}
+
+[data-brand="bullpen"] .bullpen-home {
+  min-height: calc(100dvh - 14rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1rem 4rem;
+  background: #ffffff;
+}
+[data-brand="bullpen"] .bullpen-home h1 {
+  margin: 0;
+  line-height: 0;
+}
+[data-brand="bullpen"] .bullpen-home img {
+  display: block;
+  height: 3.25rem;
+  width: auto;
+  max-width: min(90vw, 22rem);
+  object-fit: contain;
+}
+@media (min-width: 640px) {
+  [data-brand="bullpen"] .bullpen-home img {
+    height: 4.5rem;
+    max-width: 28rem;
+  }
+}
+[data-brand="bullpen"] .bc-lead {
+  max-width: 32rem;
+  margin-top: 1.75rem;
+  text-align: center;
+}
+[data-brand="bullpen"] .bc-lead p {
+  margin: 0 0 0.65rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #3d3d3d;
+}
+[data-brand="bullpen"] .bc-lead p:first-child {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #000;
+}
+[data-brand="bullpen"] .bc-lead a,
+[data-brand="bullpen"] .bc-work a {
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+[data-brand="bullpen"] .bc-work {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 48rem;
+  margin: 2rem 0 0;
+  text-align: left;
+}
+@media (min-width: 720px) {
+  [data-brand="bullpen"] .bc-work {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+[data-brand="bullpen"] .bc-work h2 {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+[data-brand="bullpen"] .bc-work p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #6b6b6b;
+}
+[data-brand="bullpen"] .bullpen-search {
+  width: 100%;
+  max-width: 36rem;
+  margin-top: 2.25rem;
+}
+
+[data-brand="bullpen"] .ms-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 28rem;
+  overflow: hidden;
+  background: #0b1c3a;
+}
+[data-brand="bullpen"] .ms-banner > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+[data-brand="bullpen"] .ms-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(8, 16, 32, 0.88) 0%, rgba(8, 16, 32, 0.55) 48%, rgba(8, 16, 32, 0.2) 100%);
+}
+[data-brand="bullpen"] .ms-banner-copy {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem;
+  color: #ffffff;
+}
+[data-brand="bullpen"] .ms-banner-copy .ms-kicker {
+  color: #8ec8ff;
+}
+[data-brand="bullpen"] .ms-banner-copy h1 {
+  margin: 0;
+  max-width: 16ch;
+  font-size: clamp(2.1rem, 4.4vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+[data-brand="bullpen"] .ms-banner-copy > p {
+  margin: 1rem 0 0;
+  max-width: 34rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #d5deea;
+}
+[data-brand="bullpen"] .ms-btn-on-dark {
+  background: transparent;
+  color: #ffffff;
+  box-shadow: inset 0 0 0 1px #ffffff;
+}
+[data-brand="bullpen"] .ms-cards article {
+  padding: 0 0 1.25rem;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px #e6e6e6;
+}
+[data-brand="bullpen"] .ms-card-media {
+  height: 8.5rem;
+  background: #0b2a6b center / cover no-repeat;
+}
+[data-brand="bullpen"] .ms-card-media-board {
+  background-image: url("/media/bullpen-hero.jpg");
+}
+[data-brand="bullpen"] .ms-card-media-navy {
+  background: #0b2a6b;
+}
+[data-brand="bullpen"] .ms-card-media-dark {
+  background: #1b1b1b;
+}
+[data-brand="bullpen"] .ms-card-media-blue {
+  background: #0078d4;
+}
+[data-brand="bullpen"] .ms-cards h3,
+[data-brand="bullpen"] .ms-cards p,
+[data-brand="bullpen"] .ms-cards a {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+[data-brand="bullpen"] .ms-cards h3 {
+  margin-top: 1.1rem;
+}
+[data-brand="bullpen"] .ms-find {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto 3.5rem;
+  padding: 2.25rem 1.25rem;
+  background: #f2f2f2;
+}
+@media (min-width: 800px) {
+  [data-brand="bullpen"] .ms-find {
+    grid-template-columns: 1fr 1.2fr;
+    padding: 2.5rem 2rem;
+  }
+}
+[data-brand="bullpen"] .ms-find h2 {
+  margin: 0 0 0.45rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+[data-brand="bullpen"] .ms-find p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #505050;
+}
+[data-brand="bullpen"] .bullpen-foot-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+}
+@media (min-width: 900px) {
+  [data-brand="bullpen"] .ms-hero {
+    grid-template-columns: 1.15fr 0.85fr;
+    padding: 3.5rem 1.25rem 4rem;
+    gap: 3rem;
+  }
+}
+[data-brand="bullpen"] .ms-kicker {
+  margin: 0 0 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #0078d4;
+}
+[data-brand="bullpen"] .ms-hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+[data-brand="bullpen"] .ms-hero-copy > p:last-of-type {
+  margin: 1rem 0 0;
+  max-width: 36rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #505050;
+}
+[data-brand="bullpen"] .ms-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+[data-brand="bullpen"] .ms-btn {
+  display: inline-flex;
+  align-items: center;
+  height: 2.75rem;
+  padding: 0 1.1rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 2px;
+}
+[data-brand="bullpen"] .ms-btn-primary {
+  background: #0078d4;
+  color: #ffffff;
+}
+[data-brand="bullpen"] .ms-btn-primary:hover {
+  background: #006cbe;
+}
+[data-brand="bullpen"] .ms-btn-ghost {
+  background: transparent;
+  color: #0078d4;
+  box-shadow: inset 0 0 0 1px #0078d4;
+}
+[data-brand="bullpen"] .ms-hero-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 12rem;
+  padding: 2.5rem 1.5rem;
+  background: #f2f2f2;
+}
+[data-brand="bullpen"] .ms-hero-media img {
+  height: 3.5rem;
+  width: auto;
+  max-width: 90%;
+}
+@media (min-width: 900px) {
+  [data-brand="bullpen"] .ms-hero-media {
+    min-height: 20rem;
+  }
+  [data-brand="bullpen"] .ms-hero-media img {
+    height: 4.5rem;
+  }
+}
+[data-brand="bullpen"] .ms-section {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.25rem 3.5rem;
+  scroll-margin-top: 4.5rem;
+}
+[data-brand="bullpen"] .ms-section > h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+[data-brand="bullpen"] .ms-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 700px) {
+  [data-brand="bullpen"] .ms-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1100px) {
+  [data-brand="bullpen"] .ms-cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+[data-brand="bullpen"] .ms-cards article {
+  padding: 0 0 1.25rem;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px #e6e6e6;
+  scroll-margin-top: 4.5rem;
+}
+[data-brand="bullpen"] .ms-cards h3 {
+  margin: 1.1rem 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+[data-brand="bullpen"] .ms-cards p {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #505050;
+}
+[data-brand="bullpen"] .ms-cards a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0078d4;
+  text-decoration: none;
+}
+[data-brand="bullpen"] .ms-cards a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+[data-brand="bullpen"] .ms-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto 3.5rem;
+  padding: 2rem 1.25rem;
+  background: #f2f2f2;
+}
+@media (min-width: 800px) {
+  [data-brand="bullpen"] .ms-split {
+    grid-template-columns: 1fr 1fr;
+    padding: 2.5rem 2rem;
+  }
+}
+[data-brand="bullpen"] .ms-split h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+[data-brand="bullpen"] .ms-split p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #505050;
+}
+
+[data-brand="bullpen"] .bc-search-wrap {
+  position: relative;
+  display: block;
+}
+[data-brand="bullpen"] .bc-search-wrap svg {
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  width: 1.125rem;
+  height: 1.125rem;
+  transform: translateY(-50%);
+  color: #9a9a9a;
+  pointer-events: none;
+}
+[data-brand="bullpen"] .bc-search {
+  display: block;
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 1.25rem 0 3rem;
+  border: 1px solid #d0d5dd;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+  appearance: none;
+}
+[data-brand="bullpen"] .bc-search::placeholder {
+  color: #9a9a9a;
+}
+[data-brand="bullpen"] .bc-search:focus {
+  border-color: #0078d4;
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.35);
+}
+
+[data-brand="bullpen"] .bullpen-foot {
+  background: #f2f2f2;
+  color: #616161;
+  border-top: 0;
+  padding: 2.5rem 1.25rem 5rem;
+}
+[data-brand="bullpen"] .bullpen-foot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+@media (min-width: 900px) {
+  [data-brand="bullpen"] .bullpen-foot-grid {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  }
+}
+[data-brand="bullpen"] .bullpen-foot-grid h2 {
+  margin: 0 0 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+[data-brand="bullpen"] .bullpen-foot-grid a,
+[data-brand="bullpen"] .bullpen-foot-grid p {
+  display: block;
+  margin: 0 0 0.4rem;
+  font-size: 0.8125rem;
+  color: #616161;
+  text-decoration: none;
+}
+[data-brand="bullpen"] .bullpen-foot-grid a:hover {
+  text-decoration: underline;
+}
+[data-brand="bullpen"] .bullpen-foot img {
+  display: block;
+  height: 1.25rem;
+  width: auto;
+  margin-bottom: 0.75rem;
+}
+[data-brand="bullpen"] .bullpen-foot-bar {
+  max-width: 80rem;
+  margin: 2rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid #e1e1e1;
+  font-size: 0.75rem;
+}
+
+[data-brand="bullpen"] .ms-dash {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem 4rem;
+}
+[data-brand="bullpen"] .ms-dash-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+[data-brand="bullpen"] .ms-dash-top h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  text-transform: capitalize;
+}
+[data-brand="bullpen"] .ms-dash-top p {
+  margin: 0.25rem 0 0;
+  font-size: 0.8125rem;
+  color: #616161;
+}
+[data-brand="bullpen"] .ms-dash-asof {
+  font-size: 0.8125rem;
+  color: #616161;
+}
+[data-brand="bullpen"] .ms-dash-lead {
+  margin: 0 0 1.25rem;
+  max-width: 40rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #505050;
+}
+[data-brand="bullpen"] .ms-kpis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+@media (min-width: 800px) {
+  [data-brand="bullpen"] .ms-kpis {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+[data-brand="bullpen"] .ms-kpis > div {
+  padding: 1rem 1.1rem;
+  background: #f2f2f2;
+}
+[data-brand="bullpen"] .ms-kpis b {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+[data-brand="bullpen"] .ms-kpis span {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  color: #616161;
+}
+[data-brand="bullpen"] .ms-tabs {
+  display: flex;
+  gap: 0.25rem;
+  margin: 1.75rem 0 1.25rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+[data-brand="bullpen"] .ms-tabs button {
+  height: 2.5rem;
+  padding: 0 0.9rem;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #616161;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+[data-brand="bullpen"] .ms-tabs button.on {
+  color: #1a1a1a;
+  font-weight: 600;
+  border-bottom-color: #0078d4;
+}
+[data-brand="bullpen"] .ms-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+[data-brand="bullpen"] .ms-table th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #616161;
+  padding: 0.55rem 0.65rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+[data-brand="bullpen"] .ms-table td {
+  padding: 0.7rem 0.65rem;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: top;
+}
+[data-brand="bullpen"] .ms-table a {
+  color: #0078d4;
+  text-decoration: none;
+}
+[data-brand="bullpen"] .ms-table a:hover {
+  text-decoration: underline;
+}
+[data-brand="bullpen"] .ms-key {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: #f2f2f2;
+  margin-bottom: 1rem;
+}
+[data-brand="bullpen"] .ms-key code {
+  flex: 1;
+  font-size: 0.8rem;
+  word-break: break-all;
+}
+[data-brand="bullpen"] .ms-key button,
+[data-brand="bullpen"] .ms-text {
+  border: 0;
+  background: transparent;
+  color: #0078d4;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+[data-brand="bullpen"] .ms-cards button.ms-text {
+  font-size: 0.9rem;
+}
+[data-brand="bullpen"] .ms-pre {
+  margin: 0 0 1.25rem;
+  padding: 1rem;
+  overflow: auto;
+  background: #f2f2f2;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+[data-brand="bullpen"] .bc-signup {
+  width: 100%;
+  max-width: 22rem;
+  text-align: center;
+}
+[data-brand="bullpen"] .bc-signup h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+[data-brand="bullpen"] .bc-signup p {
+  margin: 0.5rem 0 1.5rem;
+  font-size: 0.875rem;
+  color: #6b6b6b;
+}
+[data-brand="bullpen"] .bc-signup input {
+  display: block;
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 1.25rem;
+  border: 1px solid #d0d5dd;
+  border-radius: 2px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+}
+[data-brand="bullpen"] .bc-signup input:focus {
+  border-color: #0078d4;
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.35);
+}
+[data-brand="bullpen"] .bc-signup button {
+  margin-top: 0.75rem;
+  width: 100%;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 2px;
+  background: #0078d4;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+[data-brand="bullpen"] .bc-signup button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+[data-brand="bullpen"] .bc-signup-ok {
+  color: #2f6a43 !important;
+}
+[data-brand="bullpen"] .bc-signup-bad {
+  margin: 0.75rem 0 0 !important;
+  color: #c43c32 !important;
+}
+
+[data-brand="bullpen"] .bc-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+[data-brand="bullpen"] .bc-chips button {
+  height: 1.85rem;
+  padding: 0 0.7rem;
+  border: 1px solid #ececec;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #6b6b6b;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+[data-brand="bullpen"] .bc-desk {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+[data-brand="bullpen"] .bc-desk-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+[data-brand="bullpen"] .bc-desk-head h2 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+[data-brand="bullpen"] .bc-desk-head a {
+  font-size: 0.75rem;
+  color: #6b6b6b;
+  text-decoration: none;
+}
+[data-brand="bullpen"] .bc-wires {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ececec;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+[data-brand="bullpen"] .bc-wires li {
+  border-bottom: 1px solid #ececec;
+  padding: 0.85rem 1rem;
+}
+[data-brand="bullpen"] .bc-wires li:last-child {
+  border-bottom: 0;
+}
+[data-brand="bullpen"] .bc-wires a,
+[data-brand="bullpen"] .bc-wires span {
+  font-size: 0.875rem;
+  color: #000;
+  text-decoration: none;
+}
